@@ -13,7 +13,7 @@ export default function Forecast(){
             setData(weatherData)
             console.log(data)
         //    day1 = data.slice(0,7);
-
+//.
 
         } catch(err){
             console.log(err)
