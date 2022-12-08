@@ -1,4 +1,4 @@
-import Data from "./Data"
+import Data from "./data"
 import { useState, useEffect } from "react"
 
 export default function Base(){

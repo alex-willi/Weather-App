@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+
+
 export default function Data(){
      const [data, setData] = useState(null);
     async function handleData(){
