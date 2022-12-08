@@ -27,7 +27,6 @@ function App() {
   
 
     <Data />
-    <Icon />
     {/* <Base /> */}
     </div>
      </div>
