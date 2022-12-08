@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from "react";
+// import React, {useState, useEffect} from "react";
 
 
 
+<<<<<<< HEAD
   export const DateTime = () => {
         const [date,setDate] = useState(new Date());
         useEffect(() => {
@@ -50,3 +51,33 @@ if(currentHour > timepoint + 6){
     )
 }
     export default DateTime
+=======
+//   export const DateTime = () => {
+//         const [date,setDate] = useState(new Date());
+//         useEffect(() => {
+//             let timer = setInterval(()=>setDate(new Date()),1000)
+//             return function cleanup(){
+//                 clearInterval(timer)
+//             }
+//         });
+// let i = 0
+//  const currentHour = date.getHours()        
+// const timepoint = data[i].timepoint
+// if(currentHour > timepoint + 6){
+ 
+//     i++
+//  }
+
+//     //   const currentTime = (date.getHours)+=3;
+// // console.log(date.getHours())
+// // timer increments get hours and compare it to the timpoint of the dataseries
+// // console.log(currentTime, 'time')
+//     return(
+//         <div>
+//             <p></p>
+//             <p className="time"> Time : {date.toLocaleTimeString()}</p>
+//         </div>
+//     )
+// }
+//     export default DateTime
+>>>>>>> dev

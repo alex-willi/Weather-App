@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Data from './components/data';
+import Data from './components/Data';
 import { useEffect, useState } from "react";
 import Base from './components/base';
 import DateTime from './components/time';
@@ -20,10 +20,12 @@ function App() {
 
             <div className="wrapper">
         <div className="base" style={{border: '1px solid black'}}>
-    <div id='icon'>
-     
-    </div>
+
+    
     <Forecast />
+
+  
+
     <Data />
     <Icon />
     {/* <Base /> */}
