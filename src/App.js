@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Base from './components/base';
 import DateTime from './components/time';
 import Forecast from './components/forecast';
+import Icon from './components/icons';
+
 function App() {
   
   return (
@@ -18,9 +20,12 @@ function App() {
 
             <div className="wrapper">
         <div className="base" style={{border: '1px solid black'}}>
+    <div id='icon'>
+     
+    </div>
     <Forecast />
-    <DateTime />
     <Data />
+    <Icon />
     {/* <Base /> */}
     </div>
      </div>

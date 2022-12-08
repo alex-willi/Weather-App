@@ -10,7 +10,8 @@ export default function Forecast(props){
             const foundData = await fetch('http://www.7timer.info/bin/api.pl?lon=77.4977&lat=27.2044&product=civil&output=json');
             const weatherData = await foundData.json()
             setData(weatherData.dataseries)
-            console.log(weatherData)
+            
+            
         //    day1 = data.slice(0,7);
 
         } catch(err){
@@ -20,6 +21,9 @@ export default function Forecast(props){
    useEffect(() => {
         handleData();
     }, []);
+
+    // const day1 = data.slice(0,8).forEach.temp2m
+
 
 
 //  const day1 = data.slice(0,8).map((data,index)=>{
