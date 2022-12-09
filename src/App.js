@@ -6,13 +6,20 @@ import Base from './components/base';
 import DateTime from './components/time';
 import Forecast from './components/forecast';
 import Icon from './components/icons';
-
+import Show from './components/forecast';
 function App() {
+
+ 
+ 
+
+ 
+
+
+
   
   return (
     <div className="App">
       
-    
 
 
 
@@ -21,22 +28,23 @@ function App() {
             <div className="wrapper">
         <div className="base" style={{border: '1px solid black'}}>
 
-    
-    <Forecast />
+    {/* <Base /> */}
+    {/* <Forecast /> */}
 
-  
+  <Show />
 
-    <Data />
+    {/* <Data /> */}
     {/* <Base /> */}
     </div>
      </div>
          <button className="button">3 Days</button>
         <button className="button">1 Week</button>
         <button className="button">2 Weeks</button> 
-        
+       
      
     </div>
   );
+ 
 }
 
 export default App;
