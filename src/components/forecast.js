@@ -79,7 +79,7 @@ const [data, setData] = useState(null);
 
 
         return (
-<       div>
+    <div className='data'>
             <div className="day1">
             <p> Today: Low: {data.daily.temperature_2m_min[0]}F - High: {data.daily.temperature_2m_max[0]}F  - Inches of rain: {data.daily.precipitation_sum[0]}"</p>
         </div>
@@ -170,25 +170,29 @@ const [data, setData] = useState(null);
 
     return (
         <div>
-    <button className='3day' onClick={event =>{
+<div className='dataWrap' style={{border: '1px solid black'}}>
+            {isShown && <Forecast3 />}
+
+{show && <Today />}
+
+{isUp && <Forecast7 />}
+</div>
+<div className='btnWrap' style={{border: '1px solid black'}}>
+    <button className='three' onClick={event =>{
     handleClick();
     setIsUp(false);
     setShow(false)}} disabled={isShown ? true : false}>3 Day</button>
 
-    <button className='7day' onClick={event =>{
+    <button className='seven' onClick={event =>{
     handleDay();
     setIsShown(false);
     setShow(false)}} disabled={isUp ? true : false}>1 Week</button>
-    <button className='today' onClick={event =>{
+    <button className='todayBtn' onClick={event =>{
     handleToday();
     setIsUp(false);
     setIsShown(false);
     }} disabled={show ? true : false}>Today</button>
-    {isShown && <Forecast3 />}
-
-        {show && <Today />}
-
-        {isUp && <Forecast7 />}
+    </div>
 
     </div>
     )
