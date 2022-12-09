@@ -53,17 +53,7 @@ export default function Data() {
         {sevenDay && <Forecast7 {...data} />}
       </div>
       <div className="btnWrap" style={{ border: "1px solid black" }}>
-        <button
-          className="three"
-          onClick={() => {
-            handleClick();
-            setSevenDay(false);
-            setCurrentDay(false);
-          }}
-          disabled={threeDay ? true : false}
-        >
-          3 Day
-        </button>
+       
 
         <button
           className="seven"
@@ -74,7 +64,18 @@ export default function Data() {
           }}
           disabled={sevenDay ? true : false}
         >
-          1 Week
+          7 Day
+        </button>
+        <button
+          className="three"
+          onClick={() => {
+            handleClick();
+            setSevenDay(false);
+            setCurrentDay(false);
+          }}
+          disabled={threeDay ? true : false}
+        >
+          3 Day
         </button>
         <button
           className="todayBtn"
