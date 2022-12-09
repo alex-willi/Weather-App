@@ -79,7 +79,7 @@ export default function Data() {
         <button
           className="todayBtn"
           onClick={() => {
-            handleToday();
+           handleToday();
             setSevenDay(false);
             setThreeDay(false);
           }}
