@@ -3,7 +3,6 @@ import './App.css';
 import Data from './components/Data';
 import { useEffect, useState } from "react";
 import Base from './components/base';
-import DateTime from './components/time';
 import Forecast from './components/forecast';
 import Icon from './components/icons';
 import Show from './components/forecast';
@@ -31,7 +30,7 @@ function App() {
     {/* <Base /> */}
     {/* <Forecast /> */}
 
-  <Show />
+  <Data />
 
     {/* <Data /> */}
     {/* <Base /> */}
