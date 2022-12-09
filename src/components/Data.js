@@ -5,6 +5,8 @@ import Today from "./Today";
 import DateTime from "./DateTime";
 
 export default function Data() {
+
+
   const [threeDay, setThreeDay] = useState(false);
 
   const handleClick = () => {
@@ -20,11 +22,18 @@ export default function Data() {
   const handleToday = () => {
     setCurrentDay((current) => !current);
   };
-  const [data, setData] = useState(null);
+
+
+
+ const [data, setData] = useState(null);
   async function handleData() {
     try {
       const foundData = await fetch(
-        "https://api.open-meteo.com/v1/forecast?latitude=39.10&longitude=-94.58&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,rain_sum,showers_sum,snowfall_sum,windspeed_10m_max,winddirection_10m_dominant&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto"
+
+       
+
+        "https://api.open-meteo.com/v1/forecast?latitude=39.10&longitude=-94.58&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto"
+
       );
       const weatherData = await foundData.json();
       setData(weatherData);
@@ -42,6 +51,10 @@ export default function Data() {
 
   return (
     <div>
+
+
+      <div className=""></div>
+
       <div className="dataWrap" style={{ border: "1px solid black" }}>
         <div className="time" style={{ border: "1px solid black" }}>
           <DateTime />
@@ -53,6 +66,7 @@ export default function Data() {
         {sevenDay && <Forecast7 {...data} />}
       </div>
       <div className="btnWrap" style={{ border: "1px solid black" }}>
+
        
 
         <button
@@ -76,11 +90,37 @@ export default function Data() {
           disabled={threeDay ? true : false}
         >
           3 Day
+
+        <button
+          className="three"
+          onClick={() => {
+            handleClick();
+            setSevenDay(false);
+            setCurrentDay(false);
+          }}
+          disabled={threeDay ? true : false}
+        >
+          3 Day
+        </button>
+
+        <button
+          className="seven"
+          onClick={() => {
+            handleDay();
+            setThreeDay(false);
+            setCurrentDay(false);
+          }}
+          disabled={sevenDay ? true : false}
+        >
+          1 Week
+
         </button>
         <button
           className="todayBtn"
           onClick={() => {
-           handleToday();
+
+            handleToday();
+
             setSevenDay(false);
             setThreeDay(false);
           }}
@@ -91,4 +131,8 @@ export default function Data() {
       </div>
     </div>
   );
+
 }
+
+}
+

@@ -1,4 +1,5 @@
 export default function Forecast7(data) {
+
     return (
       <div className="sevenData">
         <div
@@ -94,3 +95,4 @@ export default function Forecast7(data) {
       </div>
     );
   }
+

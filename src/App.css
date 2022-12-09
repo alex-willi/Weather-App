@@ -75,17 +75,19 @@ body{
 }
 .sevenData{
   font-size: 15px;
-  height:10px;
+
+  height:10px
 }
 .dayOne{
-
   height:118px
 }
 .dayTwo{
-
   height:118px
 }
 .dayThree{
-  
    height:118px
+}
+.today{
+  font-family: 'PT Sans', sans-serif;
+
 }

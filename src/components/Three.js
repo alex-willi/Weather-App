@@ -1,4 +1,5 @@
 export default function Forecast3(data) {
+
     return (
       <div className="threeData">
         <div
