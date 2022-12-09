@@ -1,0 +1,43 @@
+
+
+
+
+// comparison for the timpoint 
+let j = 0
+      let hours = thisDate.getHours();
+      let currentHour = hours;
+      let timepoint = data[j].timepoint;
+      for (let i = 0; i >= currentHour; i++){
+      if (currentHour >= timepoint){
+        j += 1; console.log(j)
+      }
+    }
+    //  for (let i=0; currentHour >= timepoint; i++){   if(currentHour >= timepoint){
+    //     j++
+    //  };
+
+    //  }
+
+        //  while (currentHour >= timepoint){
+        //     i++
+        //  };
+
+/////////////
+
+   // function DateTime(){
+    //     let timer = setInterval(()=>setDate(new Date()),1000)
+    //     return function cleanup(){
+    //         clearInterval(timer)
+    //     }
+    // }
+     const [date,setDate] = useState(new Date());
+
+ 
+    useEffect(() => {
+        // DateTime();
+    });
+    const thisDate = new Date
+    console.log(thisDate)
+  console.log(thisDate.getHours(), 'testing')
+
+   <p className="time"> Time : {date.getHours()}:00</p>

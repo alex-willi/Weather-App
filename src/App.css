@@ -75,6 +75,7 @@ body{
 }
 .sevenData{
   font-size: 15px;
+
   height:10px
 }
 .dayOne{
@@ -88,4 +89,5 @@ body{
 }
 .today{
   font-family: 'PT Sans', sans-serif;
+
 }

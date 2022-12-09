@@ -1,5 +1,5 @@
 export default function Today(data) {
-  console.log(data);
+
 
   return (
     <div>
@@ -50,3 +50,4 @@ export default function Today(data) {
     </div>
   );
 }
+
